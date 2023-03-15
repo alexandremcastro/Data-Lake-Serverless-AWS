@@ -1,10 +1,36 @@
+## Sumário
++ [Introdução](#Introducao)
+    + [Links](#Links)
+        + [Link para o projeto no Notion](#Notion)
+        + [Link para o projeto no Site](#Site)
+    + [Arquitetura do projeto](#Arquitetura-do-projeto)
+    + [Criando o serviço Cloud9](#Cloud9)
+    + [Rodando o Producer e Consumer](#ProducerConsumer)
++ [Pipeline com dados não estruturados](#PipelineNaoEstruturado)
+    + [Criando o serviço Kinesis Data Streams](#CriacaoDataStreams)
+    + [Criando uma tabela no DynamoDB](#CriacaoDynamoDB)
+    + [Administrando políticas de segurança com o IAM](#IAM)
+        + [Criação da política](#Politica)
+        + [Criação da função](#Funcao)
+    + [Criando uma função com o serviço Lambda](#FuncaoLambda)
+    + [Processando dados não estruturados (Data Streams, DynamoDB e Lambda)](#ProcessandoNaoEstruturado)
++ [Pipeline com dados estruturados](#PipelineEstruturados)
+    + [Criando um bucket S3](#S3)
+    + [Criando uma tabela no Glue](#Glue)
+    + [Criando o serviço Kinesis Data Firehose](#Firehose)
+    + [Processando dados estruturados (S3, Glue e Data Firehose)](#ProcessandoEstruturados)
+    + [Criando e fazendo consultas com o Athena](#Athena)
+
+# Introdução <a name = "Introducao"></a>
+
+## Links <a name = "Links"></a>
 Link para o projeto no 
-[Notion](https://alexandremcastro.notion.site/02-2023-AWS-Data-Lake-Serverless-c8f8198221134364991976c26ee1a985)
+[Notion](https://alexandremcastro.notion.site/02-2023-AWS-Data-Lake-Serverless-c8f8198221134364991976c26ee1a985)  <a name = "Notion"></a>
 
 Link para o projeto no
-[Site](https://alexandre-castro.vercel.app/blog/datalake-serverless)
+[Site](https://alexandre-castro.vercel.app/blog/datalake-serverless) <a name = "Site"></a>
 
-## Arquitetura do projeto
+## Arquitetura do projeto <a name = "Arquitetura-do-projeto"></a>
 
 A proposta desse projeto é fornecer um Data Lake em nuvem, Serverless, utilizando os serviços da Amazon Web Services.
 
@@ -12,7 +38,7 @@ A proposta desse projeto é fornecer um Data Lake em nuvem, Serverless, utilizan
 
 <br>
 
-## Criando o serviço Cloud9
+## Criando o serviço Cloud9 <a name = "Cloud9"></a>
 
 Para que é usado o serviço Cloud9? Ele fornece um terminal de comando para uma instância EC2. Isso é essencial neste projeto, pois será nele que serão gerados os dados para consumo
 
@@ -56,8 +82,8 @@ A criação do serviço demora alguns minutos, pois ainda será criado o serviç
 
 <br>
 
-## Rodando o Producer e Consumer
-### Baixando o Producer e Consumer
+## Rodando o Producer e Consumer <a name = "ProducerConsumer"></a> 
+### Baixando o Producer e Consumer 
 
 Para baixar o Producer/Consumer, abra a janela com o terminal do Cloud9 e rode o comando:
 
@@ -101,9 +127,9 @@ Para parar de rodar ambos, faça o comando: `CTRL + C`
 
 <br>
 
-# Pipeline com dados não estruturados
+# Pipeline com dados não estruturados <a name = "PipelineNaoEstruturado"></a>
 
-## Criando o serviço Kinesis Data Streams
+## Criando o serviço Kinesis Data Streams <a name = "CriacaoDataStreams"></a>
 
 Para que é usado o serviço Kinesis? O AWS Kinesis é um serviço de streaming de dados, usado para coletar, processar e analisar grandes volumes de dados em tempo real.
 
@@ -133,7 +159,7 @@ Em seguida clique em: `Criar fluxo de dados`
 
 <br>
 
-## Criando uma tabela no DynamoDB
+## Criando uma tabela no DynamoDB <a name = "CriacaoDynamoDB"></a>
 
 Para que é usado o serviço DynamoDB? O AWS DynamoDB é um serviço de banco de dados NoSQL, que permite armazenar e recuperar grandes volumes de dados de forma rápida e escalável, sem a necessidade de provisionar ou gerenciar servidores. Ele será uma das fontes de armazenamentos de dados do Data Lake.
 
@@ -163,7 +189,7 @@ Ao fim da página, clique em: `Criar tabela`
 
 <br>
 
-## Administrando políticas de segurança com o IAM
+## Administrando políticas de segurança com o IAM <a name = "IAM"></a>
 
 Para que é usado o serviço IAM? O AWS IAM (Identity and Access Management) é um serviço de gerenciamento de identidade e acesso, usado para gerenciar o acesso a recursos da AWS de forma segura, permitindo gerenciar usuários, grupos e permissões de acesso aos serviços.
 
@@ -175,7 +201,7 @@ Clique em: `IAM`
 
 <br>
 
-### Criação da política
+### Criação da política <a name = "Politica"></a>
 
 Criarei uma politica para o DynamoDB permitir a gravação de dados na tabela criada.
 
@@ -235,7 +261,7 @@ Após, clique em: `Criar política`
 
 <br>
 
-### Criação da função
+### Criação da função <a name = "Funcao"></a>
 
 Agora irei criar uma função para o Lambda se comunicar com o Kinesis e DynamoDB utilizando as politicas:`WildRydesDynamoDBWritePolicy` e `AWSLambdaKinesisExecutionRole`
 
@@ -289,7 +315,7 @@ Verifique se a função foi criada
 
 <br>
 
-## Criando uma função com o serviço Lambda
+## Criando uma função com o serviço Lambda <a name = "FuncaoLambda"></a>
 
 Para que é usado o serviço Lambda? É um serviço para rodar códigos de diversas linguagens diferentes, nele rodará o código que será responsável por trazer os dados do Kinesis e levar para o DynamoDB.
 
@@ -457,7 +483,7 @@ Vá na aba Código e clique em: `Deploy`
 
 <br>
 
-## Processando dados não estruturados **(Data Streams, DynamoDB e Lambda)**
+## Processando dados não estruturados **(Data Streams, DynamoDB e Lambda)** <a name = "ProcessandoNaoEstruturado"></a>
 
 Com o Kinesis, DynamoDB, IAM e Lambda criados e configurados, agora é possível fazer o processamento dos dados gerados pelo script Producer.
 
@@ -491,9 +517,9 @@ Verifique se os dados foram preenchidos
 
 <br>
 
-# Pipeline com dados estruturados
+# Pipeline com dados estruturados <a name = "PipelineEstruturados"></a>
 
-## Criando um bucket S3
+## Criando um bucket S3 <a name = "S3"></a>
 
 Para que é usado o serviço S3? O S3 é um sistema de armazenamento, nele pode ser armazenado qualquer tipo de arquivo
 
@@ -528,7 +554,7 @@ Clique em: `Criar bucket`
 
 <br>
 
-## Criando uma tabela no Glue
+## Criando uma tabela no Glue <a name = "Glue"></a>
 
 Para que é usado o serviço Glue? O Glue é um serviço de integração de dados, nele será possível capturar os dados vindo do Kinesis e levando ele ao bucket S3.
 
@@ -614,7 +640,7 @@ Clique em: `Create`
 
 <br>
 
-## Criando o serviço Kinesis Data Firehose
+## Criando o serviço Kinesis Data Firehose <a name = "Firehose"></a>
 
 Vá no painel e na barra pesquisa procure por `Kinesis`
 
@@ -678,7 +704,7 @@ Clique em: `Criar fluxo de entrega`
 
 <br>
 
-## Processando dados estruturados **(S3, Glue e Data Firehose)**
+## Processando dados estruturados **(S3, Glue e Data Firehose)** <a name = "ProcessandoEstruturados"></a>
 
 Com tudo configurado, agora é os dados gerados pelo Producer, serão enviados diretamente para o S3.
 
@@ -718,7 +744,7 @@ Em resultados da consulta, verifique se o resultado da consulta, batem com os me
 
 <br>
 
-## Criando e fazendo consultas com o Athena
+## Criando e fazendo consultas com o Athena <a name = "Athena"></a>
 
 Para que é usado o serviço Athena? Com o Athena é possível analisar dados, utilizando consultas em SQL, é possível utilizar como fonte de dados o S3 e outros serviços
 
