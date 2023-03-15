@@ -411,6 +411,8 @@ Chave: `TABLE_NAME`
 
 Valor: `UnicornSensorData`
 
+<br>
+
 **Segunda variável de ambiente**
 
 Clique em: `Adicionar variáveis de ambiente`
