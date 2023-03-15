@@ -1,5 +1,3 @@
-# 02/2023 - (AWS) Data Lake Serverless
-
 ## Arquitetura do projeto
 
 A proposta desse projeto é fornecer um Data Lake em nuvem, Serverless, utilizando os serviços da Amazon Web Services.
