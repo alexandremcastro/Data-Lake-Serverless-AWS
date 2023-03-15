@@ -1,3 +1,9 @@
+Link para o projeto no 
+[Notion](https://alexandremcastro.notion.site/02-2023-AWS-Data-Lake-Serverless-c8f8198221134364991976c26ee1a985)
+
+Link para o projeto no
+[Site](https://alexandre-castro.vercel.app/blog/datalake-serverless)
+
 ## Arquitetura do projeto
 
 A proposta desse projeto é fornecer um Data Lake em nuvem, Serverless, utilizando os serviços da Amazon Web Services.
