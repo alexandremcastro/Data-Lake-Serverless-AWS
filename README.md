@@ -13,6 +13,8 @@
         + [Criação da política](#Politica)
         + [Criação da função](#Funcao)
     + [Criando uma função com o serviço Lambda](#FuncaoLambda)
+        + [Primeira variável de ambiente](#Ambiente1)
+        + [Segunda variável de ambiente](#Ambiente2)
     + [Processando dados não estruturados (Data Streams, DynamoDB e Lambda)](#ProcessandoNaoEstruturado)
 + [Pipeline com dados estruturados](#PipelineEstruturados)
     + [Criando um bucket S3](#S3)
@@ -443,6 +445,7 @@ Clique em: `Editar`
 
 ![Untitled](Imagens/Untitled%2043.png)
 
+<a name = "Ambiente1"></a>
 **Primeira variável de ambiente**
 
 Clique em: `Adicionar variáveis de ambiente`
@@ -455,6 +458,7 @@ Valor: `UnicornSensorData`
 
 <br>
 
+<a name = "Ambiente2"></a>
 **Segunda variável de ambiente**
 
 Clique em: `Adicionar variáveis de ambiente`
