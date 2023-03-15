@@ -27,8 +27,8 @@
 Link para o projeto no 
 [Notion](https://alexandremcastro.notion.site/02-2023-AWS-Data-Lake-Serverless-c8f8198221134364991976c26ee1a985)  <a name = "Notion"></a>
 
-Link para o projeto no
-[Site](https://alexandre-castro.vercel.app/blog/datalake-serverless) <a name = "Site"></a>
+Link para o projeto no  <a name = "Site"></a>
+[Site](https://alexandre-castro.vercel.app/blog/datalake-serverless)
 
 ## Arquitetura do projeto <a name = "Arquitetura-do-projeto"></a>
 
