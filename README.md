@@ -728,7 +728,7 @@ Clique em: `Criar fluxo de entrega`
 <a name = "ProcessandoEstruturados"></a>
 ### Processando dados estruturados **(S3, Glue e Data Firehose)** 
 
-Com tudo configurado, agora é os dados gerados pelo Producer, serão enviados diretamente para o S3.
+Com tudo configurado, agora os dados gerados pelo Producer, serão enviados diretamente para o S3.
 
 Para isso, rode o Producer indicando o nome do Stream
 
