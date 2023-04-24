@@ -1,6 +1,8 @@
 # Data Lake Serverless (AWS)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/alexandremcastro/Data-Lake-Serverless-AWS/blob/main/LICENSE)
 
+📝 Nota: Eu não sou responsável pelos custos do projeto, isso significa que qualquer gasto que ocorra durante a realização do projeto, como utilização de serviços, não é de minha responsabilidade. É importante que você esteja ciente desses custos e os gerencie adequadamente.
+
 ### Arquitetura do projeto
 
 Este projeto tem como objetivo oferecer um Data Lake na nuvem, sem servidor, utilizando os serviços da Amazon Web Services (AWS).
@@ -62,9 +64,7 @@ Mantenha as outras opções em padrão
 
 ![Untitled](/Imagens/Untitled%202.png)
 
-<aside>
-💡 Verifique se a instância que está sendo criada é coberta pelo nível gratuito.
-</aside>
+> **💡**: Verifique se a instância que está sendo criada é coberta pelo nível gratuito.
 
 <br>
 
