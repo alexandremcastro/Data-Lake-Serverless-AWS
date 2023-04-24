@@ -1,7 +1,7 @@
 # Data Lake Serverless (AWS)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/alexandremcastro/Data-Lake-Serverless-AWS/blob/main/LICENSE)
 
-📝 Nota: Eu não sou responsável pelos custos do projeto, isso significa que qualquer gasto que ocorra durante a realização do projeto, como utilização de serviços, não é de minha responsabilidade. É importante que você esteja ciente desses custos e os gerencie adequadamente.
+> **📝Nota:**: Eu não sou responsável pelos custos do projeto, isso significa que qualquer gasto que ocorra durante a realização do projeto, como utilização de serviços, não é de minha responsabilidade. É importante que você esteja ciente desses custos e os gerencie adequadamente.
 
 ### Arquitetura do projeto
 
@@ -40,7 +40,8 @@ Foi uma oportunidade para aplicar meus conhecimentos em tecnologia da AWS e cons
     + [Criando e fazendo consultas com o Athena](/Documentos/PipelineEstruturado.md#Athena)
 
 ## Requisitos para o projeto
-📝 Nota: Este projeto foi concluído em Fevereiro de 2023, e é importante ressaltar que alguns dos requisitos abordados podem sofrer alterações ao longo do tempo. Como em qualquer área de tecnologia, novas soluções e tecnologias surgem constantemente, o que pode tornar algumas das abordagens e soluções apresentadas neste projeto desatualizadas em algum momento.
+> **📝Nota:**: Este projeto foi concluído em Fevereiro de 2023, e é importante ressaltar que alguns dos requisitos abordados podem sofrer alterações ao longo do tempo. Como em qualquer área de tecnologia, novas soluções e tecnologias surgem constantemente, o que pode tornar algumas das abordagens e soluções apresentadas neste projeto desatualizadas em algum momento.
+
 
 <br/>
 
