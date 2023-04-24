@@ -24,21 +24,17 @@ Este projeto experimental é o resultado das minhas experiências com a implemen
 Foi uma oportunidade para aplicar meus conhecimentos em tecnologia da AWS e construir uma solução de Data Lake Serverless, que pode ser utilizada por empresas que precisam lidar com grandes volumes de dados. Aprendi muito durante o processo e espero poder utilizar esse conhecimento em projetos futuros.
 
 ## Sumário
-+ [Introdução](#Introducao)
-    + [Arquitetura do projeto](#Arquitetura-do-projeto)
-    + [Criando o serviço Cloud9](#Cloud9)
-    + [Rodando o Producer e Consumer](#ProducerConsumer)
-+ [Pipeline com dados não estruturados](#PipelineNaoEstruturado)
-    + [Criando o serviço Kinesis Data Streams](#CriacaoDataStreams)
-    + [Criando uma tabela no DynamoDB](#CriacaoDynamoDB)
-    + [Administrando políticas de segurança com o IAM](#IAM)
-    + [Criando uma função com o serviço Lambda](#FuncaoLambda)
-    + [Processando dados não estruturados (Data Streams, DynamoDB e Lambda)](#ProcessandoNaoEstruturado)
-+ [Pipeline com dados estruturados](#PipelineEstruturados)
-    + [Criando um bucket S3](#S3)
-    + [Criando uma tabela no Glue](/Documentos/PipelineEstruturado.md/#Glue)
-    + [Criando o serviço Kinesis Data Firehose](#Firehose)
-    + [Processando dados estruturados (S3, Glue e Data Firehose)](#ProcessandoEstruturados)
++ [Pipeline com dados não estruturados](/Documentos/PipelineNaoEstruturado.md#PipelineNaoEstruturado)
+    + [Criando o serviço Kinesis Data Streams](/Documentos/PipelineNaoEstruturado.md#CriacaoDataStreams)
+    + [Criando uma tabela no DynamoDB](/Documentos/PipelineNaoEstruturado.md#CriacaoDynamoDB)
+    + [Administrando políticas de segurança com o IAM](/Documentos/PipelineNaoEstruturado.md#IAM)
+    + [Criando uma função com o serviço Lambda](/Documentos/PipelineNaoEstruturado.md#FuncaoLambda)
+    + [Processando dados não estruturados (Data Streams, DynamoDB e Lambda)](/Documentos/PipelineNaoEstruturado.md#ProcessandoNaoEstruturado)
++ [Pipeline com dados estruturados](/Documentos/PipelineEstruturado.md#PipelineEstruturados)
+    + [Criando um bucket S3](/Documentos/PipelineEstruturado.md#S3)
+    + [Criando uma tabela no Glue](/Documentos/PipelineEstruturado.md#Glue)
+    + [Criando o serviço Kinesis Data Firehose](/Documentos/PipelineEstruturado.md#Firehose)
+    + [Processando dados estruturados (S3, Glue e Data Firehose)](/Documentos/PipelineEstruturado.md#ProcessandoEstruturados)
     + [Criando e fazendo consultas com o Athena](/Documentos/PipelineEstruturado.md#Athena)
 
 ## Requisitos para o projeto
@@ -90,7 +86,7 @@ A criação do serviço demora alguns minutos, pois ainda será criado o serviç
 
 <br>
 
-**Arquivos do Producer e Consumer**
+**2. Arquivos do Producer e Consumer**
 
 Baixando o Producer e Consumer
 
