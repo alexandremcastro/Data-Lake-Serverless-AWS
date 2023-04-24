@@ -1,4 +1,7 @@
-# Sumário
+# Data Lake Serverless (AWS)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/alexandremcastro/Data-Lake-Serverless-AWS/blob/main/LICENSE)
+
+## Sumário
 + [Introdução](#Introducao)
     + [Links](#Links)
         + [Link para o projeto no Notion](#Notion)
