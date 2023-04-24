@@ -25,13 +25,13 @@ Vá no painel e na barra pesquisa procure por `Kinesis`
 
 Clique em: `Kinesis`
 
-![Untitled](Imagens/Untitled%2010.png)
+![Untitled](/Imagens/Untitled%2010.png)
 
 Nesta tela, selecione: `Kinesis Data Streams` 
 
 Em seguida, selecione: `Criar fluxo de dados`
 
-![Untitled](Imagens/Untitled%2011.png)
+![Untitled](/Imagens/Untitled%2011.png)
 
 Insira o nome do fluxo de dados como: `wildrydes`
 
@@ -41,7 +41,7 @@ Mantenha as outras opções em padrão
 
 Em seguida clique em: `Criar fluxo de dados`
 
-![Untitled](Imagens/Untitled%2012.png)
+![Untitled](/Imagens/Untitled%2012.png)
 
 <br>
 
@@ -54,11 +54,11 @@ Vá no painel e na barra pesquisa procure por `DynamoDB`
 
 Clique em: `DynamoDB`
 
-![Untitled](Imagens/Untitled%2013.png)
+![Untitled](/Imagens/Untitled%2013.png)
 
 Para criar a tabela que receberemos os dados, clique em: `Criar tabela`
 
-![Untitled](Imagens/Untitled%2014.png)
+![Untitled](/Imagens/Untitled%2014.png)
 
 Como nome da tabela utilize o nome: `UnicornSensorData`
 
@@ -66,13 +66,13 @@ Como chave de partição utilize: `Name`
 
 Como chave de classificação utilize: `StatusTime`
 
-![Untitled](Imagens/Untitled%2015.png)
+![Untitled](/Imagens/Untitled%2015.png)
 
 As próximas opções são padrão
 
 Ao fim da página, clique em: `Criar tabela`
 
-![Untitled](Imagens/Untitled%2016.png)
+![Untitled](/Imagens/Untitled%2016.png)
 
 <br>
 
@@ -85,7 +85,7 @@ Vá no painel e na barra pesquisa procure por `IAM`
 
 Clique em: `IAM`
 
-![Untitled](Imagens/Untitled%2017.png)
+![Untitled](/Imagens/Untitled%2017.png)
 
 <br>
 
@@ -96,57 +96,57 @@ Criarei uma politica para o DynamoDB permitir a gravação de dados na tabela cr
 
 Na página redirecionada, clique em: `Politicas`
 
-![Untitled](Imagens/Untitled%2018.png)
+![Untitled](/Imagens/Untitled%2018.png)
 
 Em seguida clique em: `Criar politica`
 
-![Untitled](Imagens/Untitled%2019.png)
+![Untitled](/Imagens/Untitled%2019.png)
 
 No serviço, selecione: `DynamoDB`
 
 Nas ações, selecione: `BatchWriteItem`
 
-![Untitled](Imagens/Untitled%2020.png)
+![Untitled](/Imagens/Untitled%2020.png)
 
 Em recursos, selecione: `Adicionar ARN`
 
-![Untitled](Imagens/Untitled%2021.png)
+![Untitled](/Imagens/Untitled%2021.png)
 
 Para preencher essa tabela, é necessário do código ARN da tabela criada no DynamoDB
 
-![Untitled](Imagens/Untitled%2022.png)
+![Untitled](/Imagens/Untitled%2022.png)
 
 Para ter acesso ao ARN da tabela no DynamoDB, vá no serviço e clique na tabela que foi criada
 
-![Untitled](Imagens/Untitled%2023.png)
+![Untitled](/Imagens/Untitled%2023.png)
 
 O ARN fica localizado nas informações gerais da tabela
 
 Copie o código ARN
 
-![Untitled](Imagens/Untitled%2024.png)
+![Untitled](/Imagens/Untitled%2024.png)
 
 Cole o código ARN e todas as informações serão preenchidas automaticamente
 
 Clique em: `Adicionar`
 
-![Untitled](Imagens/Untitled%2025.png)
+![Untitled](/Imagens/Untitled%2025.png)
 
 Prosseguindo a criação da política
 
 Clique em: `Próximo: Tags`
 
-![Untitled](Imagens/Untitled%2026.png)
+![Untitled](/Imagens/Untitled%2026.png)
 
 Clique em: `Próximo: Revisar`
 
-![Untitled](Imagens/Untitled%2027.png)
+![Untitled](/Imagens/Untitled%2027.png)
 
 Em nome, insira: `WildRydesDynamoDBWritePolicy`
 
 Após, clique em: `Criar política`
 
-![Untitled](Imagens/Untitled%2028.png)
+![Untitled](/Imagens/Untitled%2028.png)
 
 <br>
 
@@ -159,49 +159,49 @@ Clique em: `Funções`
 
 Depois clique em: `Criar função`
 
-![Untitled](Imagens/Untitled%2029.png)
+![Untitled](/Imagens/Untitled%2029.png)
 
 Em caso de uso, selecione `Lambda`
 
 Depois clique em: `Próximo`
 
-![Untitled](Imagens/Untitled%2030.png)
+![Untitled](/Imagens/Untitled%2030.png)
 
 Pesquise pela política `AWSLambdaKinesisExecutionRole`
 
 Selecione a política: `AWSLambdaKinesisExecutionRole`
 
-![Untitled](Imagens/Untitled%2031.png)
+![Untitled](/Imagens/Untitled%2031.png)
 
 Pesquise pela política `WildRydesDynamoDBWritePolicy`
 
 Selecione a política: `WildRydesDynamoDBWritePolicy`
 
-![Untitled](Imagens/Untitled%2032.png)
+![Untitled](/Imagens/Untitled%2032.png)
 
 Confirme se as duas políticas estão selecionadas
 
-![Untitled](Imagens/Untitled%2033.png)
+![Untitled](/Imagens/Untitled%2033.png)
 
 Prossiga a criação da função
 
 Selecione: `Próximo`
 
-![Untitled](Imagens/Untitled%2034.png)
+![Untitled](/Imagens/Untitled%2034.png)
 
 Em nome da função, insira: `WildRydesStreamProcessorRole`
 
-![Untitled](Imagens/Untitled%2035.png)
+![Untitled](/Imagens/Untitled%2035.png)
 
 Verifique as políticas selecionadas
 
 Selecione: `Criar função`
 
-![Untitled](Imagens/Untitled%2036.png)
+![Untitled](/Imagens/Untitled%2036.png)
 
 Verifique se a função foi criada
 
-![Untitled](Imagens/Untitled%2037.png)
+![Untitled](/Imagens/Untitled%2037.png)
 
 <br>
 
@@ -214,17 +214,17 @@ Vá no painel e na barra pesquisa procure por `Lambda`
 
 Clique em: `Lambda`
 
-![Untitled](Imagens/Untitled%2038.png)
+![Untitled](/Imagens/Untitled%2038.png)
 
 Clique em: `Criar uma função`
 
-![Untitled](Imagens/Untitled%2039.png)
+![Untitled](/Imagens/Untitled%2039.png)
 
 Em nome da função, insira o nome: `WildRydesStreamProcessor`
 
 Selecione abaixo a opção de execução: `Node.js 14.x`
 
-![Untitled](Imagens/Untitled%2040.png)
+![Untitled](/Imagens/Untitled%2040.png)
 
 No papel de execução, selecione a opção: `Usar uma função existente`
 
@@ -232,7 +232,7 @@ Na função, selecione a `WildRydesStreamProcessorRole`, criada anteriormente na
 
 Em seguida, selecione: `Criar função`
 
-![Untitled](Imagens/Untitled%2041.png)
+![Untitled](/Imagens/Untitled%2041.png)
 
 Na parte de código, insira o código a seguir:
 
@@ -314,13 +314,13 @@ function batchWrite(requestItems, attempt = 0) {
 }
 ```
 
-![Untitled](Imagens/Untitled%2042.png)
+![Untitled](/Imagens/Untitled%2042.png)
 
 Antes do Deploy, vá nas configurações de variáveis de ambiente
 
 Clique em: `Editar`
 
-![Untitled](Imagens/Untitled%2043.png)
+![Untitled](/Imagens/Untitled%2043.png)
 
 <a name = "Ambiente1"></a>
 <b> Primeira variável de ambiente </b>
@@ -348,31 +348,31 @@ Valor: `1`
 
 Clique em: `Salvar`
 
-![Untitled](Imagens/Untitled%2044.png)
+![Untitled](/Imagens/Untitled%2044.png)
 
 Adicionando o Kinesis na função
 
 Clique em: `Adicionar gatilho`
 
-![Untitled](Imagens/Untitled%2045.png)
+![Untitled](/Imagens/Untitled%2045.png)
 
 Selecione o serviço: `Kinesis` 
 
 Em Stream do Kinesis, insira o stream criado anteriormente no Kinesis Data Streams
 
-![Untitled](Imagens/Untitled%2046.png)
+![Untitled](/Imagens/Untitled%2046.png)
 
 Mantenha o tamanho do lote em 100
 
 Clique em: `Adicionar`
 
-![Untitled](Imagens/Untitled%2047.png)
+![Untitled](/Imagens/Untitled%2047.png)
 
 Com tudo configurado, farei o Deploy da função
 
 Vá na aba Código e clique em: `Deploy`
 
-![Untitled](Imagens/Untitled%2048.png)
+![Untitled](/Imagens/Untitled%2048.png)
 
 <br>
 
@@ -389,22 +389,22 @@ Com o Cloud9 aberto, rode o Producer, mencionando o stream criado no Kinesis
 
 Rode o Consumer e verifique a produção dos dados
 
-![Untitled](Imagens/Untitled%2049.png)
+![Untitled](/Imagens/Untitled%2049.png)
 
 Na aba `Monitor`, verifique se os dados estão sendo capturados
 
-![Untitled](Imagens/Untitled%2050.png)
+![Untitled](/Imagens/Untitled%2050.png)
 
 Para verificar se os dados estão sendo entregues, abra o serviço `DynamoDB`
 
 Vá na aba tabelas e selecione a tabela `UnicornSensorData`
 
-![Untitled](Imagens/Untitled%2051.png)
+![Untitled](/Imagens/Untitled%2051.png)
 
 Clique em: `Explorar itens da tabela`
 
-![Untitled](Imagens/Untitled%2052.png)
+![Untitled](/Imagens/Untitled%2052.png)
 
 Verifique se os dados foram preenchidos
 
-![Untitled](Imagens/Untitled%2053.png)
+![Untitled](/Imagens/Untitled%2053.png)
