@@ -39,7 +39,7 @@ Foi uma oportunidade para aplicar meus conhecimentos em tecnologia da AWS e cons
     + [Processando dados estruturados (S3, Glue e Data Firehose)](/Documentos/PipelineEstruturado.md#ProcessandoEstruturados)
     + [Criando e fazendo consultas com o Athena](/Documentos/PipelineEstruturado.md#Athena)
 
-## Requisitos para o projeto
+## Pré-requisitos
 > **📝Nota:**: Este projeto foi concluído em Fevereiro de 2023, e é importante ressaltar que alguns dos requisitos abordados podem sofrer alterações ao longo do tempo. Como em qualquer área de tecnologia, novas soluções e tecnologias surgem constantemente, o que pode tornar algumas das abordagens e soluções apresentadas neste projeto desatualizadas em algum momento.
 
 
